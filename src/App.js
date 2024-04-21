@@ -1,11 +1,15 @@
 import Header from './components/Header';
+import Hero from './components/Hero';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      hello
-    </div>
+      <main id="home">
+        <Hero />
+        hello
+      </main>
+    </>
   );
 }
 
