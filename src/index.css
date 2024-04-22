@@ -337,3 +337,102 @@ img {
   }
 }
 /* --------- Hero Styles End ----------*/
+
+/* --------- Menu Styles Start ----------*/
+
+.art-board__container {
+  overflow: auto;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: 295px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid lavender;
+  margin: 10px;
+  box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__image {
+  position: relative;
+  height: 140px;
+}
+.card__image > img {
+  max-width: 100%;
+  border-bottom-right-radius: 30px;
+  transform: rotate(10deg) translate(-15px, -55px);
+  position: absolute;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s;
+}
+
+.card:hover .card__image > img {
+  transform: rotate(0) translate(0, 15px) scale(1.2);
+}
+
+.card__info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0px 30px 20px 30px;
+}
+.card__info h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.card__info p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card__info--price {
+  text-align: right;
+  color: orangered;
+}
+.rect2 {
+  position: relative;
+  bottom: 315px;
+  right: 15px;
+  width: 325px;
+  height: 230px;
+  border: 1px solid lavender;
+  border-radius: 0 0px 80px 0;
+  background-image: url();
+  transform: rotate(10deg);
+  object-fit: cover;
+}
+.checked {
+  color: #ffd700;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.our-menu {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+/* --------- Menu Styles End ----------*/
