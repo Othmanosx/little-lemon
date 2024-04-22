@@ -24,12 +24,10 @@ const Header = () => {
           className={isNavExpanded ? 'nav-bar-links expanded' : 'nav-bar-links'}
         >
           {navLinks.map((navLink) => (
-            <li
-              key={navLink.name}
-              onClick={() => setIsNavExpanded(false)}
-              className="hover-animation"
-            >
-              <Link to={navLink.path}>{navLink.name}</Link>
+            <li key={navLink.name} onClick={() => setIsNavExpanded(false)}>
+              <a className="hover-animation" href={navLink.path}>
+                {navLink.name}
+              </a>
             </li>
           ))}
         </ul>
