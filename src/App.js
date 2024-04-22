@@ -1,20 +1,17 @@
-import About from './components/About';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Menu from './components/Menu';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Main from './views/Main';
+import Layout from './views/Layout';
+import BookingForm from './views/BookingForm';
 
 function App() {
   return (
-    <>
-      <Header />
-      <main id="home">
-        <Hero />
-        <Menu />
-        <About />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Main />} />
+        <Route path="reservations" element={<BookingForm />} />
+      </Route>
+    </Routes>
   );
 }
 
