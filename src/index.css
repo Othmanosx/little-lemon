@@ -364,6 +364,13 @@ img {
   align-items: center;
 }
 
+@media (max-width: 792px) {
+  .art-board__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
 .card {
   width: 100%;
   overflow: hidden;
@@ -384,7 +391,7 @@ img {
   height: 140px;
 }
 .card__image > img {
-  max-width: 100%;
+  width: 100%;
   border-bottom-right-radius: 30px;
   transform: rotate(10deg) translate(-15px, -55px);
   position: absolute;
