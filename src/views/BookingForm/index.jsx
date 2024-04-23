@@ -86,12 +86,15 @@ const BookingForm = () => {
 
   const onSubmit = async (values, actions) => {
     await new Promise((r) => setTimeout(r, 2000));
-
     localStorage.setItem('formData', JSON.stringify(values));
+    localStorage.setItem('name', values.name);
+    localStorage.setItem('email', values.email);
+    localStorage.setItem('phone', values.phone);
     localStorage.setItem('date', values.date);
     localStorage.setItem('time', values.time);
     localStorage.setItem('guests', values.guests);
     localStorage.setItem('occasion', values.occasion);
+    localStorage.setItem('description', values.description);
 
     actions.resetForm();
 
@@ -133,14 +136,12 @@ const BookingForm = () => {
     <section className="booking-form-container">
       <Formik
         initialValues={{
-          name: '',
-          email: '',
-          phone: '',
-          date: '',
-          time: '',
-          guests: '',
-          occasion: '',
-          description: '',
+          name: localStorage.getItem('name') || '',
+          email: localStorage.getItem('email') || '',
+          phone: localStorage.getItem('phone') || '',
+          guests: localStorage.getItem('guests') || '',
+          occasion: localStorage.getItem('occasion') || '',
+          description: localStorage.getItem('description') || '',
         }}
         validationSchema={validationSchema}
         onSubmit={onSubmit}

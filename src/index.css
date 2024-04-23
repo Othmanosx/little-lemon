@@ -699,6 +699,21 @@ text:focus {
   border-radius: 16px;
   border: none;
   padding: 13px 16px;
+  transition: all 0.2s;
+}
+
+.btn-sub:hover,
+.btn-edit:hover,
+.btn-book:hover {
+  background-color: var(--primary-green);
+  color: var(--highlight-light);
+  transform: scale(1.02);
+}
+
+.btn-sub:active,
+.btn-edit:active,
+.btn-book:active {
+  transform: scale(0.98);
 }
 
 .text-center {

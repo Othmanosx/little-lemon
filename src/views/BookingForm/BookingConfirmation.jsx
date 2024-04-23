@@ -13,6 +13,14 @@ const BookingConfirmation = () => {
   const handleBackButtonClick = () => {
     // Remove the data from local storage
     localStorage.removeItem('formData');
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('phone');
+    localStorage.removeItem('date');
+    localStorage.removeItem('time');
+    localStorage.removeItem('guests');
+    localStorage.removeItem('occasion');
+    localStorage.removeItem('description');
     setSubmit(false);
   };
 
